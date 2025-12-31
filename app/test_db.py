@@ -1,6 +1,9 @@
 from app.core.database import engine
-from sqlalchemy import text
 
-with engine.connect() as conn:
-    result = conn.execute(text("SELECT 1"))
-    print(result.fetchone())
+
+def test_connection():
+    with engine.connect() as connection:
+        print("Database connection successful.")
+
+if __name__ == "__main__":
+    test_connection()
