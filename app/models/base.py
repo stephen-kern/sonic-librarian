@@ -1,5 +1,5 @@
 from  sqlalchemy.orm import DeclarativeBase, declared_attr, Mapped
-from sqlalchemy import column, Boolean, DateTime, func, Integer
+from sqlalchemy import Column, Boolean, DateTime, func, Integer
 
 class Base(DeclarativeBase):
     id: Mapped[int] = Column(Integer, primary_key=True, autoincrement=True)
