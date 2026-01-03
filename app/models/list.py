@@ -10,7 +10,6 @@ if TYPE_CHECKING:
 class List(Base):
     __tablename__ = "lists"
 
-    id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(255), nullable=False)
 
     artists: Mapped[list["Artist"]] = relationship(

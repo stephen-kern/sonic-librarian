@@ -3,6 +3,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from app.core.config import DATABASE_URL
+from app.models.base import Base
 
 
 # Engine and SessionLocal are the core components for database interaction
@@ -17,8 +18,3 @@ SessionLocal = sessionmaker(
     autoflush=False,
     bind=engine
 )
-
-# Base class for our ORM models
-class Base(DeclarativeBase):
-    pass
-
